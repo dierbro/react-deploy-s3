@@ -7,7 +7,7 @@ export default async () => {
   spinner.setSpinnerString('⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏')
   spinner.start()
 
-  await exec('npm run build')
+  await exec('npm run build', {maxBuffer: 500*1024})
 
   spinner.stop(true)
 
